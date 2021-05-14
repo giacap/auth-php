@@ -1,0 +1,14 @@
+<?php
+    
+   
+    require './configuration.php';
+    session_start();
+    
+    //csrf protection when deleting account
+    if($_POST['csrftoken'] !== $_SESSION['csrf']){
+        header('Location: ./index.php');
+        exit();
+    }
+
+    echo 'Account deleted';
+?>
