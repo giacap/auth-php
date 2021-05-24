@@ -2,8 +2,6 @@
 
     require './configuration.php';
 
-    
-    //valuta se spostare questo include dentro la funzione del post
     include_once './config/database.php';
 
     ini_set('display_errors', 0);
